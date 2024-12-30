@@ -9,7 +9,7 @@ import "./header.styles.css";
 import { useAppDispatch, useAppSelector } from "../../hooks/useRedux.ts";
 import { toggleModal } from "../../features/modal/modal.slice.tsx";
 import { selectStatusFilter } from "../../features/invoice/invoice.slice.ts";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 
 const Header = ({ total }: { total?: number }) => {
   const dispatch = useAppDispatch();

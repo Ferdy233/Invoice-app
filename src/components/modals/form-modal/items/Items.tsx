@@ -9,12 +9,16 @@ import {
   UseFieldArrayRemove,
   useFormContext,
 } from "react-hook-form";
-import { initialItems, ItemType } from "../../../../types/form.types.ts";
+import {
+  FormValues,
+  initialItems,
+  ItemType,
+} from "../../../../types/form.types.ts";
 import Text from "../../../ui/typography/text/Text.tsx";
 
 interface ItemsProps {
   fields: FieldArrayWithId<ItemType>[];
-  append: UseFieldArrayAppend<ItemType, "items">;
+  append: UseFieldArrayAppend<FormValues, "items">;
   remove: UseFieldArrayRemove;
 }
 const Items = ({ remove, fields, append }: ItemsProps) => {
