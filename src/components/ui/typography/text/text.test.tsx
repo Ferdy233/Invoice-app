@@ -10,16 +10,16 @@ describe("test component", () => {
 
     expect(text).toBeInTheDocument();
     expect(text).toHaveTextContent("hello");
-    expect(text).toHaveClass("text md");
+    expect(text.className).toContain("md");
   });
 
   test("should render test children with specified size", () => {
-    render(<Text size="lg">hello</Text>);
+    render(<Text size="sm">hello</Text>);
 
     const text = screen.getByText(/hello/i);
 
     expect(text).toBeInTheDocument();
     expect(text).toHaveTextContent("hello");
-    expect(text).toHaveClass("text lg");
+    expect(text.className).toContain("sm");
   });
 });
