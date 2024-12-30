@@ -1,0 +1,120 @@
+:root {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #7c5dfa;
+  --primary-hover: #9277ff;
+  --bg-danger: #ec5757;
+  --bg-danger-hover: #ff9797;
+  --bg-paid: #33d69f17;
+  --bg-pending: #ff8f0017;
+  --bg-dark-blue: #373b53;
+  --text-paid: #33d69f;
+  --text-pending: #ff8f00;
+  --text-id: #7e88c3;
+  --text-white: #ffffff;
+  --text-warm-white: #dfe3fa;
+  --text-hash: #888eb0;
+}
+
+html[data-theme="light"] {
+  --bg-primary: #f8f8fb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #373b53;
+  --bg-accent: #f9fafe;
+  --bg-accent-hover: #dfe3fa;
+  --bg-muted: #373b53;
+  --bg-draft: #dfe3fa57;
+  --bg-dropdown: #ffffff;
+  --bg-checkbox: #dfe3fa;
+  --bg-form: #ffffff;
+  --input-border: #dfe3fa;
+  --bg-save-draft-hover: #0c0e16;
+
+  --text-primary: #0c0e16;
+  --text-secondary: #888eb0;
+  --text-tertiary: #7e88c3;
+  --text-go-back: #7e88c3;
+  --text-draft: #373b53;
+  --text-name: #858bb2;
+  --text-status: #858bb2;
+}
+
+html[data-theme="dark"] {
+  --bg-primary: #141625;
+  --bg-secondary: #1e2139;
+  --bg-tertiary: #1e2139;
+  --bg-accent: #252945;
+  --bg-accent-hover: #ffffff;
+  --bg-muted: #0c0e16;
+  --bg-draft: #373b5357;
+  --bg-dropdown: #252945;
+  --bg-checkbox: #1e2139;
+  --bg-form: #141625;
+  --input-border: #252945;
+  --bg-save-draft-hover: #1e2139;
+
+  --text-primary: #ffffff;
+  --text-secondary: #dfe3fa;
+  --text-tertiary: #dfe3fa;
+  --text-go-back: #888eb0;
+  --text-draft: #dfe3fa;
+  --text-status: #dfe3fa;
+  --text-name: #ffffff;
+
+  input {
+    outline: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url("./assets/fonts/spartan/Spartan-Medium.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Spartan";
+  src: url("./assets/fonts/spartan/Spartan-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Spartan", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--input-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--input-border);
+
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

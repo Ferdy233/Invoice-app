@@ -1,0 +1,71 @@
+.date-term {
+  display: flex;
+  gap: 20px;
+
+  @media (width <= 430px) {
+    flex-direction: column;
+  }
+
+  & > div {
+    flex: 1;
+  }
+
+  input[type="date"] {
+    background-image: url("../../../../assets/images/icon-calendar.svg");
+    background-position: 95%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 15px;
+    border: solid 1px var(--input-border);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  .select-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+    }
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 15px;
+    border: solid 1px var(--input-border);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &::after {
+      background: red;
+    }
+  }
+}

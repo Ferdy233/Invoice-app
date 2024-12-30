@@ -1,0 +1,76 @@
+.dialog__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+
+  @media (width <= 768px) {
+    top: 80px;
+  }
+
+  @media (width <= 430px) {
+    top: 72px;
+  }
+
+  &.overlay {
+    background: #00000097;
+  }
+}
+
+.dialog {
+  position: relative;
+  z-index: 1000;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width <= 768px) {
+    padding: 20px;
+  }
+}
+
+.primary {
+  background: var(--bg-form);
+}
+
+.secondary {
+  background: var(--bg-secondary);
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.sm {
+  width: 80%;
+  max-width: 480px;
+}
+
+.md {
+  width: 719px;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.rounded-sm {
+  border-radius: 8px;
+}
+
+.rounded-md {
+  border-radius: 15px;
+}
+
+.rounded-lg {
+  border-radius: 20px;
+}
+
+.rounded-full {
+  border-radius: 50px;
+}

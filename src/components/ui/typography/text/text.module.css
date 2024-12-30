@@ -1,0 +1,19 @@
+.text {
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.sm {
+  font-size: 0.688rem;
+  letter-spacing: -0.23px;
+  line-height: 1.125rem;
+}
+
+.md {
+  font-size: 0.75rem;
+  letter-spacing: -0.25px;
+  line-height: 0.938rem;
+}

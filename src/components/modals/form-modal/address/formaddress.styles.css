@@ -1,0 +1,45 @@
+.form {
+  h2 span {
+    color: var(--text-hash);
+  }
+}
+
+.form-address {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-address__info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    div {
+      flex: 1;
+    }
+
+    .form-address__info-left {
+      display: flex;
+      gap: 20px;
+      flex: 2;
+    }
+    @media (width <= 430px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .form-address__info-country {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bill-to,
+.bill-from {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    color: var(--primary);
+  }
+}

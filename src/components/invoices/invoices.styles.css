@@ -1,0 +1,10 @@
+.invoices{
+    gap: 60px;
+    padding: 5px;
+
+    .invoices__card-list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,85 @@
+.button {
+  user-select: none;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: -0.25px;
+  line-height: 0.938rem;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.default {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--text-white);
+
+  &:hover,
+  &:disabled {
+    background: var(--primary-hover);
+  }
+}
+
+.secondary {
+  background: var(--bg-dark-blue);
+  color: var(--text-warm-white);
+
+  &:hover,
+  &:disabled {
+    background: var(--bg-save-draft-hover);
+    color: var(--text-secondary);
+  }
+}
+
+.tertiary {
+  background: var(--bg-accent);
+  color: var(--text-tertiary);
+
+  &:hover,
+  &:disabled {
+    background: var(--bg-accent-hover);
+    color: var(--text-id);
+  }
+}
+
+.danger {
+  background: var(--bg-danger);
+  color: var(--text-white);
+
+  &:hover,
+  &:disabled {
+    background: var(--bg-danger-hover);
+  }
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.rounded-sm {
+  border-radius: 8px;
+}
+
+.rounded-md {
+  border-radius: 15px;
+}
+
+.rounded-lg {
+  border-radius: 25px;
+}
+
+.rounded-full {
+  border-radius: 50px;
+}

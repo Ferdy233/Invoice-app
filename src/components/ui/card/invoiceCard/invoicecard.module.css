@@ -1,0 +1,79 @@
+.invoice__card {
+  &:hover {
+    border-color: var(--primary);
+  }
+
+  .invoice__card-left {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /*width: 100%;*/
+    align-items: center;
+
+    .invoice__card-left__details {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .invoice__card-payment-due {
+        color: var(--text-secondary);
+      }
+
+      .invoice__card-id {
+        flex: 0.5;
+
+        span {
+          color: var(--text-id);
+        }
+      }
+    }
+
+    .invoice__card-client-name {
+      color: var(--text-name);
+      flex: 1;
+    }
+
+    @media (width <= 430px) {
+      align-items: flex-start;
+      width: 100%;
+      .invoice__card-left__details {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .invoice__card-client-name {
+        flex: unset;
+      }
+    }
+  }
+
+  .invoice__card-right {
+    /*width: 100%;*/
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    .invoice__card-badge-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .invoice__card-total {
+      flex: 1;
+      text-align: center;
+    }
+
+    @media (width <= 430px) {
+      width: 100%;
+
+      .invoice__card-total {
+        text-align: left;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}

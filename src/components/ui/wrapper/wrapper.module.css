@@ -1,0 +1,15 @@
+.wrapper {
+  width: 90%;
+  min-width: 600px;
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+
+  @media (width <= 768px) {
+    min-width: 500px;
+  }
+
+  @media (width <= 430px) {
+    min-width: 300px;
+  }
+}

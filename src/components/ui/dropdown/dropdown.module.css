@@ -1,0 +1,60 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 180px;
+  background: var(--bg-dropdown);
+  box-shadow: 0 0 10px #00000027;
+  position: absolute;
+  top: 100%;
+  right: -1.1rem;
+  z-index: 1001;
+  text-transform: capitalize;
+  animation: dropdownExpand 0.3s forwards;
+
+  .dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+    &:hover {
+      .custom__checkbox {
+        border-color: var(--primary);
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .custom__checkbox {
+      background-color: var(--primary);
+      background-image: url("../../../assets/images/icon-check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: var(--primary);
+    }
+
+    .custom__checkbox {
+      border: solid 2px transparent;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border-radius: 3px;
+      background-color: var(--bg-checkbox);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes dropdownExpand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

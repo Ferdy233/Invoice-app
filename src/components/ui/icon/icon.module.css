@@ -1,0 +1,54 @@
+.icon {
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.rounded-sm {
+  border-radius: 8px;
+}
+
+.rounded-md {
+  border-radius: 15px;
+}
+
+.rounded-lg {
+  border-radius: 25px;
+}
+
+.rounded-full {
+  border-radius: 50px;
+}
+
+.xs {
+  width: 10px;
+  height: 10px;
+}
+
+.sm {
+  width: 15px;
+  height: 15px;
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+}
+
+.lg {
+  width: 60px;
+  height: 60px;
+}
+
+.xl {
+  width: 100px;
+  height: 100px;
+}
+
+.xxl {
+  width: 250px;
+  height: 250px;
+}

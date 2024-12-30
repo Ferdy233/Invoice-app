@@ -1,0 +1,235 @@
+.view__invoice-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .go-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 5px;
+    margin-right: auto;
+
+    &:hover {
+      color: var(--text-go-back);
+    }
+  }
+
+  .invoice__button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      padding: 12px 20px;
+    }
+
+    @media (width <= 430px) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .button-wrapper {
+    width: 100%;
+    border-radius: 0;
+    display: none;
+
+    @media (width <= 430px) {
+      display: block;
+    }
+  }
+}
+.view__invoice {
+  gap: 30px;
+
+  .invoice__details-wrapper,
+  .invoice__notice-wrapper {
+    padding: 40px;
+
+    @media (width <= 430px) {
+      padding: 20px;
+    }
+  }
+
+  .invoice__notice-wrapper {
+    .invoice__status-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .status {
+        color: var(--text-status);
+      }
+    }
+
+    @media (width <= 430px) {
+      .invoice__status-wrapper {
+        justify-content: space-between;
+        width: 100%;
+      }
+      .invoice__button-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  .invoice__details-wrapper {
+    flex-direction: column;
+    gap: 20px;
+
+    .address {
+      color: var(--text-tertiary);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .invoice-title {
+      color: var(--text-tertiary);
+      margin-bottom: 10px;
+    }
+
+    .invoice__details__sender-address__wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 20px;
+
+      .invoice__details-description {
+        span {
+          color: var(--text-hash);
+        }
+      }
+
+      .invoice__details__sender-address {
+        text-align: right;
+      }
+
+      @media (width <= 430px) {
+        flex-direction: column;
+
+        h3 {
+          font-size: 0.75rem;
+        }
+
+        .invoice__details__sender-address {
+          text-align: left;
+        }
+      }
+    }
+
+    .invoice__details__recipient-details {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 20px;
+
+      .invoice__details__sent-to {
+        flex: 1;
+      }
+
+      .invoice__details__recipient-details-date__address {
+        display: flex;
+        justify-content: space-between;
+        flex: 2;
+        gap: 20px;
+
+        div {
+          flex: 1;
+        }
+      }
+
+      @media (width <= 430px) {
+        flex-direction: column;
+
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+
+      & > div {
+        flex: 1;
+
+        h3 {
+          margin-bottom: 10px;
+        }
+      }
+
+      .invoice__details-date {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+      }
+    }
+
+    .invoice__details-receipt {
+      width: 100%;
+      background: var(--bg-accent);
+      box-shadow: none;
+      padding: 0;
+      flex-direction: column;
+      overflow: hidden;
+
+      .invoice__details-receipt__details {
+        box-shadow: none;
+        width: 100%;
+        background: transparent;
+        padding: 40px;
+
+        table {
+          width: 100%;
+          gap: 20px;
+          border-collapse: collapse;
+
+          thead {
+            color: var(--text-tertiary);
+
+            .table__title-quantity {
+              text-align: center;
+            }
+
+            .table__title-price,
+            .table__title-total {
+              text-align: right;
+            }
+          }
+
+          tbody {
+            td {
+              padding-top: 30px;
+            }
+            .table__quantity {
+              color: var(--text-tertiary);
+              text-align: center;
+            }
+
+            .table__price {
+              color: var(--text-tertiary);
+              text-align: right;
+            }
+
+            .table__total {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .invoice__details-receipt__amount-due {
+        box-shadow: none;
+        width: 100%;
+        padding: 40px;
+        background: var(--bg-muted);
+        border-radius: 0;
+        color: var(--text-white);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}

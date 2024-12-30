@@ -1,0 +1,27 @@
+.headline {
+  display: flex;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  letter-spacing: -1px;
+
+  @media (width <= 430px) {
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.63px;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.8px;
+}
