@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# Invoice App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The Invoice App is a web application built with React and TypeScript that allows users to manage invoices efficiently. Users can create, view, edit, and delete invoices, as well as filter them based on their status. The application is designed with a clean and user-friendly interface, utilizing modern web technologies.
 
-Currently, two official plugins are available:
+## Features
+- **Create Invoices**: Users can create new invoices with detailed information.
+- **View Invoices**: View a list of all invoices with their statuses.
+- **Edit Invoices**: Modify existing invoices as needed.
+- **Delete Invoices**: Remove invoices that are no longer needed.
+- **Filter Invoices**: Filter invoices by their status (paid, pending, draft).
+- **Responsive Design**: The application is fully responsive and works on various screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Redux Toolkit**: A library for managing application state.
+- **Vite**: A build tool that provides a fast development environment.
+- **Vitest**: A testing framework for unit and integration tests.
+- **React Hook Form**: A library for managing form state and validation.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ferdy233/invoice-app.git
+   cd invoice-app
+2. Install dependencies:
+bash
+npm install
+3. Start the application:
+bash
+npm run dev
+4. Open your web browser and navigate to http://localhost:3000 to access the application.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
